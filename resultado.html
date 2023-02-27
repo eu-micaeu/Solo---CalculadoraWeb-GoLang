@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Resultado da Calculadora</title>
+	<style>
+		input[type=button] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	
+		input[type=button]:hover {
+			background-color: #45a049;
+		}
+	
+		input[type=text] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+	</style>	
+</head>
+<body>
+	<h2>Resultado da Calculadora</h2>
+	<form>
+		<input type="text" id="resultado" name="resultado" readonly><br>
+		<input type="button" value="Voltar" onclick="window.location.href='index.html'">
+	</form>
+	<script>
+		// Obtem o parametro resultado da URL
+		const urlParams = new URLSearchParams(window.location.search);
+		const resultado = urlParams.get('resultado');
+
+		// Exibe o resultado no campo de texto
+		document.getElementById('resultado').value = resultado;
+	</script>
+</body>
+</html>
