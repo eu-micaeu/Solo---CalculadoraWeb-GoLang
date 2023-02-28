@@ -1,18 +1,7 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-  h1 {
-    color: #007bff;
-  }
-  
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+﻿h1 {
+  color: blue;
+}
+
+a {
+  color: green;
+}
