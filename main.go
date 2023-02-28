@@ -1,27 +1,15 @@
 ﻿package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
-	"strconv"
+    "fmt"
+    "net/http"
 )
 
 func main() {
-	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
-}
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        http.ServeFile(w, r, r.URL.Path[1:])
+    })
 
-func handler(w http.ResponseWriter, r *http.Request) {
-	if r.Method == "POST" {
-		display := r.FormValue("display")
-		result, err := strconv.ParseFloat(display, 64)
-		if err != nil {
-			http.Error(w, "Erro ao converter o valor", http.StatusBadRequest)
-			return
-		}
-		fmt.Fprintf(w, "%.2f", result)
-	} else {
-		http.ServeFile(w, r, "index.html")
-	}
+    fmt.Println("Servindo em http://localhost:8080")
+    http.ListenAndServe(":8080", nil)
 }

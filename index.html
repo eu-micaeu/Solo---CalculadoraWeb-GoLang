@@ -1,63 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Calculadora</title>
-	<style>
-		input[type=button] {
-			background-color: #4CAF50;
-			color: white;
-			padding: 14px 20px;
-			margin: 8px 0;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-		}
-	
-		input[type=button]:hover {
-			background-color: #45a049;
-		}
-	
-		input[type=text] {
-			width: 100%;
-			padding: 12px 20px;
-			margin: 8px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			box-sizing: border-box;
-		}
-	</style>	
-	<script>
-		function addToDisplay(value) {
-			document.getElementById('display').value += value;
-		}
-
-		function clearDisplay() {
-			document.getElementById('display').value = '';
-		}
-	</script>
-</head>
-<body>
-	<h2>Calculadora</h2>
-	<form method="POST" action="resultado.html">
-		<input type="text" id="display" name="display" readonly><br>
-		<input type="button" value="1" onclick="addToDisplay(1)">
-		<input type="button" value="2" onclick="addToDisplay(2)">
-		<input type="button" value="3" onclick="addToDisplay(3)"><br>
-		<input type="button" value="4" onclick="addToDisplay(4)">
-		<input type="button" value="5" onclick="addToDisplay(5)">
-		<input type="button" value="6" onclick="addToDisplay(6)"><br>
-		<input type="button" value="7" onclick="addToDisplay(7)">
-		<input type="button" value="8" onclick="addToDisplay(8)">
-		<input type="button" value="9" onclick="addToDisplay(9)"><br>
-		<input type="button" value="0" onclick="addToDisplay(0)">
-		<input type="button" value="+" onclick="addToDisplay('+')">
-		<input type="button" value="-" onclick="addToDisplay('-')"><br>
-		<input type="button" value="*" onclick="addToDisplay('*')">
-		<input type="button" value="/" onclick="addToDisplay('/')">
-		<input type="button" value="C" onclick="clearDisplay()"><br>
-		<input type="submit" value="=">
-	</form>
-</body>
+  <head>
+    <title>Minha Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Bem-vindo à minha página inicial!</h1>
+    <p>Esta é a minha primeira página HTML.</p>
+    <a href="about.html">Sobre mim</a>
+  </body>
 </html>
