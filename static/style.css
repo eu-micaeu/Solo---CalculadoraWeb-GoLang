@@ -1,5 +1,7 @@
 ﻿html, body {
-  height: 99%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
 
 .calculator {
   max-width: 220px;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
   border: 3px solid #000;
@@ -18,7 +21,7 @@ body {
 
 .calculator input[type="text"] {
   display: block;
-  width: 99%;
+  width: 100%;
   margin-bottom: 10px;
   padding: 8px;
   font-size: 24px;
@@ -29,7 +32,7 @@ body {
 
 .calculator input[type="button"] {
   display: inline-block;
-  width: 50px;
+  width: 25%;
   height: 50px;
   margin-right: 2px;
   margin-bottom: 6px;
@@ -45,4 +48,14 @@ body {
 
 .calculator input[type="button"]:hover {
   background-color: #009914;
+}
+
+@media only screen and (min-width: 768px) {
+  .calculator {
+    max-width: 400px;
+  }
+
+  .calculator input[type="button"] {
+    width: 20%;
+  }
 }
